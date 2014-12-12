@@ -135,7 +135,7 @@ function boomerang(){
 		    var arr=stringa.split("<removekebab>");
 			$(".result ul").html("");
 		    for(var i=0; i<arr.length-1;i++){
-				var temp=arr[i].split("/");
+				var temp=arr[i].split("£");
 				var iniq=new Date(temp[1]*1000);
 				var finq=new Date(temp[2]*1000);
 				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+iniq.getHours()+"-"+finq.getDay()+","+finq.getHours()+"*"+temp.toString()+"</div><div class='room'>"+temp[0]+"</div></li>");

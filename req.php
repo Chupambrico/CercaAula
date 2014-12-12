@@ -23,7 +23,7 @@ if (!$conn) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			//echo $row["aula"]."/".date("G:i",$row["orainizio"])."/".date("G:i",$row["orafine"])."<removekebab>";
-			echo $row["aula"]."/".$row["orainizio"]."/".$row["orafine"]."/".$row["id"]."<removekebab>";
+			echo $row["aula"]."£".$row["orainizio"]."£".$row["orafine"]."£".$row["id"]."<removekebab>";
 			}
      
 	} else {
