@@ -68,6 +68,7 @@ if ($result->num_rows > 0) {
 							while(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 								if(date('w',((strtotime(date('d-m-Y',$orafin[$i])))+86400))!=date('w',$orafin[$i])){
 									echo date('w',((strtotime(date('d-m-Y',$orafin[$i])))+86400))." ".date('w',$orafin[$i])."<br>";
+									echo ((strtotime(date('d-m-Y',$orafin[$i])))+86400)." ".$orafin[$i]."<br>";
 								}
 								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 									VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+86400).")";
