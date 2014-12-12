@@ -65,6 +65,7 @@ if ($result->num_rows > 0) {
 				if($i+1!=count($orain)){
 					if($orain[$i+1]!=$orafin[$i]){
 						if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
+							echo 'oi';
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+86400).")";
 							$conn->query($sql);
@@ -72,6 +73,7 @@ if ($result->num_rows > 0) {
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".((strtotime(date('d-m-Y',$orain[$i+1])))+18000).",".$orain[$i+1].")";
 							$conn->query($sql);
 						}else{
+							echo 'io';
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$orain[$i+1].")";
 							$conn->query($sql);
