@@ -135,8 +135,10 @@ function boomerang(){
 		    var arr=stringa.split("<removekebab>");
 			$(".result ul").html("");
 		    for(var i=0; i<arr.length-1;i++){
-				var temp=arr[i].split("/"); 
-				$(".result ul").append("<li><div class='hours'>"+temp[1]+"-"+temp[2]+"</div><div class='room'>"+temp[0]+"</div></li>");
+				var temp=arr[i].split("/");
+				var iniq=new Date(temp[1]);
+				var finq=new Date(temp[2]);
+				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+"-"+finq.getDaY()+","+"</div><div class='room'>"+temp[0]+"</div></li>");
 	
 			}
 		    
