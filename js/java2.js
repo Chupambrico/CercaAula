@@ -138,7 +138,7 @@ function boomerang(){
 				var temp=arr[i].split("/");
 				var iniq=new Date(temp[1]);
 				var finq=new Date(temp[2]);
-				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+"-"+finq.getDaY()+","+"</div><div class='room'>"+temp[0]+"</div></li>");
+				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+"-"+finq.getDay()+","+"</div><div class='room'>"+temp[0]+"</div></li>");
 	
 			}
 		    
