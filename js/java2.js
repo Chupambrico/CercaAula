@@ -136,9 +136,9 @@ function boomerang(){
 			$(".result ul").html("");
 		    for(var i=0; i<arr.length-1;i++){
 				var temp=arr[i].split("/");
-				var iniq=new Date(temp[1]);
-				var finq=new Date(temp[2]);
-				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+"-"+finq.getDay()+","+"</div><div class='room'>"+temp[0]+"</div></li>");
+				var iniq=new Date(temp[1]*1000);
+				var finq=new Date(temp[2]*1000);
+				$(".result ul").append("<li><div class='hours'>"+iniq.getDay()+","+iniq.getHours()+"-"+finq.getDay()+","+finq.getHours()+"</div><div class='room'>"+temp[0]+"</div></li>");
 	
 			}
 		    
