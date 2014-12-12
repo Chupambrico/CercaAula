@@ -17,29 +17,32 @@ while((time()<$iniz)OR(time()>$fin)){
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-	$up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
-	$up[1]="Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO";
-	$up[2]="Palazzo Fedrigotti, c.so Bettini 31 ROVERETO";
-	$up[3]="Palazzo Istruzione, c.so Bettini 84, ROVERETO";
-	$up[4]="Facolta di Economia, via Inama 5";
-	$up[5]="Facolta di Lettere e Filosofia, via T. Gar";
-	$up[6]="Facolta di Ingegneria, Mesiano";
-	$up[7]="Biblioteca di Ingegneria, Mesiano";
-	$up[8]="Facolta di Sociologia, via Verdi 26";
-	$gup[0]="Povo";
-	$gup[1]="Povo";
-	$gup[2]="Rovereto";
-	$gup[3]="Rovereto";
-	$gup[4]="Economia";
-	$gup[5]="Lettere";
-	$gup[6]="Mesiano";
-	$gup[7]="Mesiano";
-	$gup[8]="Sociologia";
-	
-	for($i=0;$i<count($up);$i++){
-		$sql="UPDATE orario SET polo='".$gup[$i]."' WHERE polo='".$up[$i]."'";
-		$conn->query($sql);
-	}
+
+date_default_timezone_set('Europe/Rome');
+
+$up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
+$up[1]="Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO";
+$up[2]="Palazzo Fedrigotti, c.so Bettini 31 ROVERETO";
+$up[3]="Palazzo Istruzione, c.so Bettini 84, ROVERETO";
+$up[4]="Facolta di Economia, via Inama 5";
+$up[5]="Facolta di Lettere e Filosofia, via T. Gar";
+$up[6]="Facolta di Ingegneria, Mesiano";
+$up[7]="Biblioteca di Ingegneria, Mesiano";
+$up[8]="Facolta di Sociologia, via Verdi 26";
+$gup[0]="Povo";
+$gup[1]="Povo";
+$gup[2]="Rovereto";
+$gup[3]="Rovereto";
+$gup[4]="Economia";
+$gup[5]="Lettere";
+$gup[6]="Mesiano";
+$gup[7]="Mesiano";
+$gup[8]="Sociologia";
+
+for($i=0;$i<count($up);$i++){
+	$sql="UPDATE orario SET polo='".$gup[$i]."' WHERE polo='".$up[$i]."'";
+	$conn->query($sql);
+}
 	
 $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
