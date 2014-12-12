@@ -99,7 +99,7 @@ if ($result->num_rows > 0) {
 					}
 				}else{
 					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$fin.")";
+						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".($fin-3600).")";
 					$conn->query($sql);
 				}
 			}
