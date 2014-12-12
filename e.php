@@ -69,12 +69,12 @@ if ($result->num_rows > 0) {
 					if($orain[$i+1]!=$orafin[$i]){
 						if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 							while(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
-								if(date('w',((strtotime(date('d-m-Y',$orafin[$i])))+86400))!=date('w',$orafin[$i])){
-									echo date('w',((strtotime(date('d-m-Y',$orafin[$i])))+86400))." ".date('w',$orafin[$i])."<br>";
-									echo ((strtotime(date('d-m-Y',$orafin[$i])))+86400)." ".$orafin[$i]."<br>";
+								if(date('w',((strtotime(date('d-m-Y',$orafin[$i])))+82800))!=date('w',$orafin[$i])){
+									echo date('w',((strtotime(date('d-m-Y',$orafin[$i])))+82800))." ".date('w',$orafin[$i])."<br>";
+									echo ((strtotime(date('d-m-Y',$orafin[$i])))+82800)." ".$orafin[$i]."<br>";
 								}
 								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-									VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+86400).")";
+									VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
 								$conn->query($sql);
 								$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 							}
