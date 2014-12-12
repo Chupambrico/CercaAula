@@ -87,6 +87,10 @@ if ($result->num_rows > 0) {
 							$conn->query($sql);
 							*/
 						}else{
+							if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
+								echo date('w',$orain[$i+1])." ".date('w',$orafin[$i])."<br>";
+								echo $orain[$i+1]." ".$orafin[$i]."<br>";
+							}
 							//echo date('w',$orain[$i+1])." ".date('w',$orafin[$i])."<br>";
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$orain[$i+1].")";
