@@ -10,7 +10,7 @@ $conn = new mysqli($db_host, $db_user, $db_pass,$db_name);
 $iniz=1417388400;
 $fin=$iniz+604800;
 while((time()<$iniz)OR(time()>$fin)){
-	$iniz+=604800;
+	$iniz+=604800+21600;
 	$fin+=604800;
 }
 
@@ -61,13 +61,23 @@ if ($result->num_rows > 0) {
 				$orafin[$i]=$col["orafine"];
 				$i++;
 			}
+			while(date('w',$orain[0])!=date('w',$iniz)){
+				if(date('w',((strtotime(date('d-m-Y',$iniz)))+82800))!=date('w',$iniz)){
+					echo date('w',((strtotime(date('d-m-Y',$iniz)))+82800))." ".date('w',$iniz)."<br>";
+					echo ((strtotime(date('d-m-Y',$iniz)))+82800)." ".$iniz."<br>";
+				}
+				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+					VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniz.",".((strtotime(date('d-m-Y',$iniz)))+82800).")";
+				$conn->query($sql);
+				$iniz=(strtotime(date('d-m-Y',$iniz)))+104400;
+			}
 			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 				VALUES ('".$row["aula"]."','".$row["polo"]."',".($iniz+21600).",".$orain[0].")";
 			$conn->query($sql);
 			for($i=0;$i<count($orain);$i++){
 				if($i+1!=count($orain)){
 					if($orain[$i+1]!=$orafin[$i]){
-						if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
+						//if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 							while(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 								if(date('w',((strtotime(date('d-m-Y',$orafin[$i])))+82800))!=date('w',$orafin[$i])){
 									echo date('w',((strtotime(date('d-m-Y',$orafin[$i])))+82800))." ".date('w',$orafin[$i])."<br>";
@@ -86,16 +96,11 @@ if ($result->num_rows > 0) {
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".((strtotime(date('d-m-Y',$orain[$i+1])))+18000).",".$orain[$i+1].")";
 							$conn->query($sql);
 							*/
-						}else{
-							if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
-								echo date('w',$orain[$i+1])." ".date('w',$orafin[$i])."<br>";
-								echo $orain[$i+1]." ".$orafin[$i]."<br>";
-							}
-							//echo date('w',$orain[$i+1])." ".date('w',$orafin[$i])."<br>";
+						//}else{
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$orain[$i+1].")";
 							$conn->query($sql);
-						}
+						//}
 					}
 				}else{
 					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
