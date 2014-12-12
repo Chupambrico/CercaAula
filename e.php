@@ -69,6 +69,8 @@ if ($result->num_rows > 0) {
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+86400).")";
 							$conn->query($sql);
+							echo "<br>".((strtotime(date('d-m-Y',$orain[$i+1])))+18000)."<br>";
+							echo $orain[$i+1]."<br><br>";
 							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 								VALUES ('".$row["aula"]."','".$row["polo"]."',".((strtotime(date('d-m-Y',$orain[$i+1])))+18000).",".$orain[$i+1].")";
 							$conn->query($sql);
