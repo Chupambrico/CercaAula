@@ -82,7 +82,13 @@ $(document).ready(function() {
 			 if(hrefval == "#about") {   
 			 $(".location").html($(this).html());
 			
-			   openClose();
+			   //openClose();
+			   if( snapper.state().state=="left" ){
+		snapper.close();
+	} else {
+		snapper.open('left');
+	}
+	return false;
 			   polo=$(this).html();		   
 			   abomba();
 			  }
@@ -160,14 +166,14 @@ function GetXmlHttpObject(){
 		return null;
 	}
 
-function openClose() {
+/*function openClose() {
 	if( snapper.state().state=="left" ){
 		snapper.close();
 	} else {
 		snapper.open('left');
 	}
 	return false;
-}
+}*/
  
  /*function openSidepage() {  
 	//Desktop version
