@@ -52,6 +52,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
+	$iniztemp=$iniz;
+	$fintemp=$fin;
 	$sql = "SELECT DISTINCT orainizio,orafine FROM orario WHERE orario.aula='".$row["aula"]."' AND orario.polo='".$row["polo"]."' ORDER BY orario.orainizio";
 		$aulas = $conn->query($sql);
 		if ($aulas->num_rows > 0) {
@@ -61,14 +63,14 @@ if ($result->num_rows > 0) {
 				$orafin[$i]=$col["orafine"];
 				$i++;
 			}
-			while(date('w',$iniz)!=date('w',$orain[0])){
+			while(date('w',$iniztemp)!=date('w',$orain[0])){
 				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-					VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniz.",".((strtotime(date('d-m-Y',$iniz)))+82800).")";
+					VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniztemp.",".((strtotime(date('d-m-Y',$iniztemp)))+82800).")";
 				$conn->query($sql);
-				$iniz=(strtotime(date('d-m-Y',$iniz)))+104400;
+				$iniztemp=(strtotime(date('d-m-Y',$iniztemp)))+104400;
 			}
 			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-				VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniz.",".$orain[0].")";
+				VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniztemp.",".$orain[0].")";
 			$conn->query($sql);
 			for($i=0;$i<count($orain);$i++){
 				if($i+1!=count($orain)){
@@ -87,14 +89,14 @@ if ($result->num_rows > 0) {
 						//}
 					}
 				}else{
-					while(date('w',$orafin[$i])!=date('w',$fin)){
+					while(date('w',$orafin[$i])!=date('w',$fintemp)){
 						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 							VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
 						$conn->query($sql);
 						$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 					}
 					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$fin.")";
+						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$fintemp.")";
 					$conn->query($sql);
 				}
 			}
