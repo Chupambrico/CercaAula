@@ -76,6 +76,8 @@
 			</select>
 			<select class="orafine">
 			</select>
+			<div class="location">
+			</div>
 		</div>
 		<div id="az" class="container result">
 			<ul>
