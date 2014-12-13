@@ -1,4 +1,7 @@
-<!DOCTYPE html><head>
+<?php $page='h'; ?>
+<!DOCTYPE html>
+<html>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!--Declare page as mobile friendly --> 
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
