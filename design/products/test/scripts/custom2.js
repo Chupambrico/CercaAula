@@ -70,7 +70,11 @@ function dataWeek(){
 var polo="";
 var orai=1417694400;
 var oraf=1417775400;
- $(document).ready(function() {
+$(document).ready(function() {
+	var snapper = new Snap({
+	  element: document.getElementById('content')
+	});
+	
 	 $(".page-sidebar a").on("click", function(e){  
 			 e.preventDefault();  
 			 var hrefval = $(this).attr("href");  
