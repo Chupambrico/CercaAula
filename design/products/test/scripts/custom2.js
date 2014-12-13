@@ -88,7 +88,6 @@ $(document).ready(function() {
 	} else {
 		snapper.open('left');
 	}
-	return false;
 			   polo=$(this).html();		   
 			   abomba();
 			  }
