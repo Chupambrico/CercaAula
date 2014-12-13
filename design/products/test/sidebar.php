@@ -2,6 +2,7 @@
 	<div class="page-sidebar-scroll">
 		<div class="sidebar-header">
 			<a class="delete-sidebar" href="#"></a>
+			<img width="63" alt="img" src="images/misc/logot.png" class="sidebar-logo">
 		</div>
 		
 		<p class="sidebar-separator">NAVIGATION</p>
