@@ -67,7 +67,7 @@
 			<?php include 'sidebar.php';?>
 			   
 			<div id="content" class="page-content">
-				<div class="page-header">
+				<div class="page-header spazio-fondo">
 					<p class="logo location custom-location">
 						<img src="images/misc/logo.png" width="63">
 					</p>
