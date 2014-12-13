@@ -1,12 +1,29 @@
-.hours{
-	border-radius: 4px 0px 0px 4px;
-	width:19%;
-	font-size:12pt;
-	float:left;
-	background-color: #ffc966;
-	border-right:solid 1px #1B252D; 
+.custom-location {
+	color: #ffffff;
+	display: block;
+	font-family: "Lato",sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 800;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
 }
-.room{
-	width:80%;
-    display:inline-block;
+
+html body div.all-elements div#content.page-content div.container.spazio-fondo.center-text {
+	margin-bottom: 20px;
+}
+
+html, body {
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
+}
+.push {
+	height: 60px; /* .push must be the same height as .footer */
 }
