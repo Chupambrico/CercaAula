@@ -71,7 +71,7 @@ var polo="";
 var orai=1417694400;
 var oraf=1417775400;
  $(document).ready(function() {
-	 $(".list li a").on("click", function(e){  
+	 $(".page-sidebar a").on("click", function(e){  
 			 e.preventDefault();  
 			 var hrefval = $(this).attr("href");  
 			   
