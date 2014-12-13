@@ -12,7 +12,7 @@ $(window).bind("load", function() {
                 footerHeight = $footer.height();
                 footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
                 
-                /* DEBUGGING STUFF
+                // DEBUGGING STUFF
                 
                 console.log("Document height: ", $(document.body).height());
                 console.log("Window height: ", $(window).height());
@@ -21,7 +21,7 @@ $(window).bind("load", function() {
                 console.log("Footer top: ", footerTop);
                 console.log("-----------")
                 
-                */
+                //
        
                if ( ($(document.body).height()+footerHeight) < $(window).height()) {
                    $footer.css({
