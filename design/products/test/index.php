@@ -67,13 +67,13 @@
 			<?php include 'sidebar.php';?>
 			   
 			<div id="content" class="page-content">
-				<div class="page-header spazio-fondo">
+				<div class="page-header">
 					<p class="logo location custom-location">
 						<img src="images/misc/logo.png" width="63">
 					</p>
 					<a href="#" class="deploy-sidebar"></a>
 				</div>
-				<div class="container">
+				<div class="container spazio-fondo center-text">
 					<span class="custom-dropdown custom-dropdown--blue">
 						<select class="custom-dropdown__select custom-dropdown__select--blue day">
 						</select>
