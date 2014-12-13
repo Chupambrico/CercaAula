@@ -92,7 +92,7 @@
 					<ul>
 					</ul>
 				</div>
-				<div class="footer">
+				<div id="footer" class="footer">
 					<a href="#" class="footer-facebook"></a>
 					<a href="#" class="footer-twitter"></a>
 					<a href="#" class="footer-up go-up"></a>
