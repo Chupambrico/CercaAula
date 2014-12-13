@@ -46,7 +46,7 @@
 		<script src="scripts/custom.js"			 type="text/javascript"></script>
 		<script src="scripts/custom2.js"		 type="text/javascript"></script>
 		<script src="scripts/framework.js"		 type="text/javascript"></script>
-		<script src="scripts/foot.js"			 type="text/javascript"></script>
+		<script src="scripts/example.js"			 type="text/javascript"></script>
 
 	</head>
 	<body>
