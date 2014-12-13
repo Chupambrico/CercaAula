@@ -27,7 +27,7 @@ html, body {
 }
 
 html body div.all-elements {
-	min-height: 100%;
+	height: 100%;
 }
 
 html body div.all-elements div#content.page-content {
