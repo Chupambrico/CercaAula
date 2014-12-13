@@ -59,7 +59,7 @@
 
 <div class="all-elements">
     
-    <?php include './sidebar.html';?>
+    <?php include './sidebar.php';?>
        
     <div class="page-content" id="content">
         <div class="page-header">
