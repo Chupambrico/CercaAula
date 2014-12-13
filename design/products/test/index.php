@@ -82,26 +82,6 @@
 			<ul>
 			</ul>
 		</div>
-        <div class="bxslider-wrapper" data-snap-ignore="true">
-            <div class="bxslider">
-                <div>
-                    <img src="images/slider/0.jpg" alt="img"/>
-                    <blockquote class="slider-caption">
-                        <p class="slider-title">
-                            THE ONLY FLAT<br>MOBILE PAGE
-                        </p>
-                    </blockquote>
-                </div>
-                <div>
-                    <img src="images/slider/1.jpg" alt="img"/>
-                    <blockquote class="slider-caption">
-                        <p class="slider-title">
-                            SIMPLE, CLEAN<br>AND PROPORTIONATE
-                        </p>
-                    </blockquote>
-                </div>
-            </div>
-		</div>  
         <div class="container">
         	<h4 class="heading center-text">WELCOME</h4>
             <p class="center-text">Flat interfaces made to shine, look clean and perfect on any device! We've also implemented swipe features! Drag this text to the right!</p>
