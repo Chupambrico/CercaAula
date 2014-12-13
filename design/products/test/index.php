@@ -65,45 +65,40 @@
 			
 			<?php include 'sidebar.php';?>
 			   
-			<div id="content" class="page-content wrapper">
+			<div id="content" class="page-content">
+				<div class="page-header">
+					<p class="logo location custom-location">
+						<img src="images/misc/logo.png" width="63">
+					</p>
+					<a href="#" class="deploy-sidebar"></a>
+				</div>
+				<div class="container spazio-fondo center-text">
+					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+						<select class="custom-dropdown__select custom-dropdown__select--blue day">
+						</select>
+					</span>
+					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+						<select class="custom-dropdown__select custom-dropdown__select--blue orainizio">
+						</select>
+					</span>
+					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+						<select class="custom-dropdown__select custom-dropdown__select--blue orafine">
+						</select>
+					</span>
+				</div>
+				<div class='decoration'></div>
+				<div class="container result">
+					<ul>
+					</ul>
+				</div>
 				
-					<div class="page-header">
-						<p class="logo location custom-location">
-							<img src="images/misc/logo.png" width="63">
-						</p>
-						<a href="#" class="deploy-sidebar"></a>
-					</div>
-					<div class="container spazio-fondo center-text">
-						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-							<select class="custom-dropdown__select custom-dropdown__select--blue day">
-							</select>
-						</span>
-						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-							<select class="custom-dropdown__select custom-dropdown__select--blue orainizio">
-							</select>
-						</span>
-						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-							<select class="custom-dropdown__select custom-dropdown__select--blue orafine">
-							</select>
-						</span>
-					</div>
-					<div class='decoration'></div>
-					<div class="container result">
-						<ul>
-						</ul>
-					</div>
-					
-				
-				
-				    
-			</div>
-			<div class='push'></div>
-		<div class="footer">
+				<div class="footer">
 					<a href="#" class="footer-facebook"></a>
 					<a href="#" class="footer-twitter"></a>
 					<a href="#" class="footer-up go-up"></a>
 					<em>All rights reserved</em>
-				</div> 
+				</div>     
+			</div> 
 		</div>
 	</body>
 </html>
