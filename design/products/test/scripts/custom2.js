@@ -88,7 +88,7 @@ $(document).ready(function() {
 	} else {
 		snapper.open('left');
 	}
-	var roba=$(this).html().split("<em>");
+	var roba=$(this).html().split("<em");
 			   polo=roba[0];		   
 			   abomba();
 			  }
