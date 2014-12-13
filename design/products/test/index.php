@@ -27,6 +27,7 @@
 <link href="styles/swipebox.css"			rel="stylesheet" type="text/css">
 <link href="styles/icons.css"				rel="stylesheet" type="text/css">
 <link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+<link href="styles/custom.css"				rel="stylesheet" type="text/css">
 
 
 <!--Page Scripts Load -->
@@ -64,7 +65,7 @@
        
     <div id="content" class="page-content">
         <div class="page-header">
-            <p class="logo">
+            <p class="logo location">
                 <img src="images/misc/logo.png" width="63">
             </p>
             <a href="#" class="deploy-sidebar"></a>
@@ -76,8 +77,6 @@
 			</select>
 			<select class="orafine">
 			</select>
-			<div class="location">
-			</div>
 		</div>
 		<div id="az" class="container result">
 			<ul>
