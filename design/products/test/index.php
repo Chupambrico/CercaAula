@@ -65,7 +65,7 @@
 			
 			<?php include 'sidebar.php';?>
 			   
-			<div id="content" class="page-content wrapper">
+			<div id="content" class="page-content">
 				
 					<div class="page-header">
 						<p class="logo location custom-location">
@@ -95,7 +95,7 @@
 					
 				
 				
-				<div class='push'></div>
+				
 			</div>
 			<div class='push'></div>
 		</div>
