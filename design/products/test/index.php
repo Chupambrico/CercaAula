@@ -78,7 +78,7 @@
 					<select class="orafine">
 					</select>
 				</div>
-				<div class="container no-bottom result">
+				<div class="container result">
 					<ul>
 					</ul>
 				</div>
@@ -93,32 +93,3 @@
 		</div>
 	</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
