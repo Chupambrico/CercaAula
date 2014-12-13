@@ -29,7 +29,6 @@
 		<link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
 		<link href="styles/custom.css"				rel="stylesheet" type="text/css">
 		<link href="styles/a.css"					rel="stylesheet" type="text/css">
-		<link href="styles/b.css"					rel="stylesheet" type="text/css">
 		
 
 
