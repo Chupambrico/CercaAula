@@ -23,7 +23,6 @@
 <link href="styles/style.css"				rel="stylesheet" type="text/css">
 <link href="styles/framework-style.css" 	rel="stylesheet" type="text/css">
 <link href="styles/framework.css" 			rel="stylesheet" type="text/css">
-<link href="styles/bxslider.css"			rel="stylesheet" type="text/css">
 <link href="styles/swipebox.css"			rel="stylesheet" type="text/css">
 <link href="styles/icons.css"				rel="stylesheet" type="text/css">
 <link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
@@ -38,7 +37,6 @@
 <script src="scripts/subscribe.js"		 type="text/javascript"></script>
 <script src="scripts/contact.js"		 type="text/javascript"></script>
 <script src="scripts/jquery.swipebox.js" type="text/javascript"></script>
-<script src="scripts/bxslider.js"		 type="text/javascript"></script>
 <script src="scripts/colorbox.js"		 type="text/javascript"></script>
 <script src="scripts/retina.js"			 type="text/javascript"></script>
 <script src="scripts/custom.js"			 type="text/javascript"></script>
