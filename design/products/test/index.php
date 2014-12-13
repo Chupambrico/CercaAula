@@ -41,7 +41,7 @@
 <script src="scripts/colorbox.js"		 type="text/javascript"></script>
 <script src="scripts/retina.js"			 type="text/javascript"></script>
 <script src="scripts/custom.js"			 type="text/javascript"></script>
-<script src="scripts/custom2.js"			 type="text/javascript"></script>
+<script src="scripts/custom2.js"		 type="text/javascript"></script>
 <script src="scripts/framework.js"		 type="text/javascript"></script>
 
 </head>
@@ -68,13 +68,15 @@
                 <img src="images/misc/logo.png" width="63">
             </p>
             <a href="#" class="deploy-sidebar"></a>
+        </div>
+		<div class="container">
 			<select class="day">
 			</select>
 			<select class="orainizio">
 			</select>
 			<select class="orafine">
 			</select>
-        </div>
+		</div>
 		<div id="az" class="container result">
 			<ul>
 			</ul>
