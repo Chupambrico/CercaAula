@@ -74,21 +74,16 @@
 					<a href="#" class="deploy-sidebar"></a>
 				</div>
 				<div class="container">
-					<select class="day">
-					</select>
-					<select class="orainizio">
-					</select>
-					<select class="orafine">
-					</select>
-				</div>
-				<div class="container">
 					<span class="custom-dropdown custom-dropdown--blue">
-						<select class="custom-dropdown__select custom-dropdown__select--blue">
-							<option>The Shawshank Redemption</option>
-							<option>The Godfather</option>
-							<option>Pulp Fiction</option>
-							<option>The Good, the Bad and the Ugly</option>
-							<option>12 Angry Men</option>
+						<select class="custom-dropdown__select custom-dropdown__select--blue day">
+						</select>
+					</span>
+					<span class="custom-dropdown custom-dropdown--blue">
+						<select class="custom-dropdown__select custom-dropdown__select--blue orainizio">
+						</select>
+					</span>
+					<span class="custom-dropdown custom-dropdown--blue">
+						<select class="custom-dropdown__select custom-dropdown__select--blue orafine">
 						</select>
 					</span>
 				</div>
