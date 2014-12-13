@@ -87,6 +87,7 @@
 						</select>
 					</span>
 				</div>
+				<div class='decoration'></div>
 				<div class="container result">
 					<ul>
 					</ul>
