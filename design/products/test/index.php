@@ -83,36 +83,60 @@
 				<div class="container">
 					<ul class="localnav ui-corner-all ui-controlgroup ui-controlgroup-horizontal" data-type="horizontal" data-role="controlgroup">
 						<li>
-							<select id="select-choice-1" name="select-choice-1">
-								<option value="standard">Standard: 7 day</option>
-								<option value="rush">Rush: 3 days</option>
-								<option value="express">Express: next day</option>
-								<option value="overnight">Overnight</option>
-							</select>
+							<div data-theme="c" class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-up-c">
+								<span class="ui-btn-inner ui-btn-corner-all">
+									<span class="ui-btn-text">Standard: 7 day</span>
+									<span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+								</span>
+								<select id="select-choice-1" name="select-choice-1">
+									<option value="standard">Standard: 7 day</option>
+									<option value="rush">Rush: 3 days</option>
+									<option value="express">Express: next day</option>
+									<option value="overnight">Overnight</option>
+								</select>
+							</div>
 						</li>
 						<li>
-							<select id="select-choice-1" name="select-choice-1">
-								<option value="standard">Standard: 7 day</option>
-								<option value="rush">Rush: 3 days</option>
-								<option value="express">Express: next day</option>
-								<option value="overnight">Overnight</option>
-							</select>
+							<div data-theme="c" class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-up-c">
+								<span class="ui-btn-inner ui-btn-corner-all">
+									<span class="ui-btn-text">Standard: 7 day</span>
+									<span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+								</span>
+								<select id="select-choice-1" name="select-choice-1">
+									<option value="standard">Standard: 7 day</option>
+									<option value="rush">Rush: 3 days</option>
+									<option value="express">Express: next day</option>
+									<option value="overnight">Overnight</option>
+								</select>
+							</div>
 						</li>
 						<li>
-							<select id="select-choice-1" name="select-choice-1">
-								<option value="standard">Standard: 7 day</option>
-								<option value="rush">Rush: 3 days</option>
-								<option value="express">Express: next day</option>
-								<option value="overnight">Overnight</option>
-							</select>
+							<div data-theme="c" class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-up-c">
+								<span class="ui-btn-inner ui-btn-corner-all">
+									<span class="ui-btn-text">Standard: 7 day</span>
+									<span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+								</span>
+								<select id="select-choice-1" name="select-choice-1">
+									<option value="standard">Standard: 7 day</option>
+									<option value="rush">Rush: 3 days</option>
+									<option value="express">Express: next day</option>
+									<option value="overnight">Overnight</option>
+								</select>
+							</div>
 						</li>
 						<li>
-							<select id="select-choice-1" name="select-choice-1">
-								<option value="standard">Standard: 7 day</option>
-								<option value="rush">Rush: 3 days</option>
-								<option value="express">Express: next day</option>
-								<option value="overnight">Overnight</option>
-							</select>
+							<div data-theme="c" class="ui-btn ui-btn-icon-right ui-btn-corner-all ui-shadow ui-btn-up-c">
+								<span class="ui-btn-inner ui-btn-corner-all">
+									<span class="ui-btn-text">Standard: 7 day</span>
+									<span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+								</span>
+								<select id="select-choice-1" name="select-choice-1">
+									<option value="standard">Standard: 7 day</option>
+									<option value="rush">Rush: 3 days</option>
+									<option value="express">Express: next day</option>
+									<option value="overnight">Overnight</option>
+								</select>
+							</div>
 						</li>
 					</ul>
 				</div>
