@@ -69,7 +69,6 @@
 			<div id="content" class="page-content">
 				<div class="page-header">
 					<p class="logo location custom-location">
-						<img src="images/misc/logo.png" width="63">
 					</p>
 					<a href="#" class="deploy-sidebar"></a>
 				</div>
@@ -93,9 +92,6 @@
 					</ul>
 				</div>
 				<div id="footer" class="footer">
-					<a href="#" class="footer-facebook"></a>
-					<a href="#" class="footer-twitter"></a>
-					<a href="#" class="footer-up go-up"></a>
 					<em>All rights reserved</em>
 				</div>
 			</div>
