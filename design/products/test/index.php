@@ -61,7 +61,7 @@
 
 
 
-		<div class="all-elements">
+		
 			
 			<?php include 'sidebar.php';?>
 			   
@@ -98,6 +98,6 @@
 					<em>All rights reserved</em>
 				</div>
 			</div>
-		</div>
+		
 	</body>
 </html>
