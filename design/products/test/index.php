@@ -28,6 +28,8 @@
 		<link href="styles/icons.css"				rel="stylesheet" type="text/css">
 		<link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
 		<link href="styles/custom.css"				rel="stylesheet" type="text/css">
+		<link href="styles/jquery.mobile-1.4.5.min.css"				rel="stylesheet" type="text/css">
+		
 
 
 		<!--Page Scripts Load -->
