@@ -25,7 +25,3 @@ html, body {
 .push {
 	height: 60px; /* .push must be the same height as .footer */
 }
-
-html body div.all-elements div#content.page-content {
-	min-height: 100%;
-}
