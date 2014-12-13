@@ -92,7 +92,7 @@
 					</ul>
 				</div>
 				<div id="footer" class="footer">
-					<em>All rights reserved</em>
+					<em>Footer</em>
 				</div>
 			</div>
 		</div>
