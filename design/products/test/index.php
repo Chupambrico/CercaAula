@@ -46,6 +46,7 @@
 		<script src="scripts/custom.js"			 type="text/javascript"></script>
 		<script src="scripts/custom2.js"		 type="text/javascript"></script>
 		<script src="scripts/framework.js"		 type="text/javascript"></script>
+		<script src="scripts/foot.js"			 type="text/javascript"></script>
 
 	</head>
 	<body>
@@ -61,7 +62,7 @@
 
 
 
-		
+		<div class="all-elements">
 			
 			<?php include 'sidebar.php';?>
 			   
@@ -98,6 +99,6 @@
 					<em>All rights reserved</em>
 				</div>
 			</div>
-		
+		</div>
 	</body>
 </html>
