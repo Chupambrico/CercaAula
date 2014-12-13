@@ -31,5 +31,5 @@ html body div.all-elements {
 }
 
 html body div.all-elements div#content.page-content {
-	min-height: 100%;
+	height: 100%;
 }
