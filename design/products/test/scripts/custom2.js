@@ -88,7 +88,8 @@ $(document).ready(function() {
 	} else {
 		snapper.open('left');
 	}
-			   polo=$(this).html();		   
+	var roba=$(this).html().split("<em>");
+			   polo=roba[0];		   
 			   abomba();
 			  }
 	 }); 
@@ -134,7 +135,8 @@ function abomba(){
 		var url="../../../req.php?polo="+polo+"&orai="+begin+"&oraf="+end;
 		xmlhttpContenuti.onreadystatechange=boomerang;
 		xmlhttpContenuti.open("GET",url,true);
-		xmlhttpContenuti.send(null);}
+		xmlhttpContenuti.send(null);
+		}
 }
 function boomerang(){
 		if (xmlhttpContenuti.readyState==4){
