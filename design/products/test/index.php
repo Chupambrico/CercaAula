@@ -81,8 +81,8 @@
 					</select>
 				</div>
 				<div class="container">
-					<span class="custom-dropdown custom-dropdown--emerald">
-						<select class="custom-dropdown__select custom-dropdown__select--emerald">
+					<span class="custom-dropdown custom-dropdown--blue">
+						<select class="custom-dropdown__select custom-dropdown__select--blue">
 							<option>The Shawshank Redemption</option>
 							<option>The Godfather</option>
 							<option>Pulp Fiction</option>
