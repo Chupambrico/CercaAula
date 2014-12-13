@@ -68,7 +68,7 @@
 			   
 			<div id="content" class="page-content">
 				<div class="page-header">
-					<p class="logo location">
+					<p class="logo location custom-location">
 						<img src="images/misc/logo.png" width="63">
 					</p>
 					<a href="#" class="deploy-sidebar"></a>
