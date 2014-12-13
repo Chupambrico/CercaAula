@@ -30,7 +30,6 @@
 
 
 <!--Page Scripts Load -->
-<script src="//www.paultrifa.com/analytics/chalis.js"></script>
 <script src="scripts/jquery.min.js"		 type="text/javascript"></script>	
 <script src="scripts/snap.js"			 type="text/javascript"></script>
 <script src="scripts/hammer.js"			 type="text/javascript"></script>	
