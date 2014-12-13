@@ -144,7 +144,7 @@ function boomerang(){
 			var Re = new RegExp("%0D%0A","g");
 			stringa = stringa.replace(Re,"");
 		    var arr=stringa.split("<removekebab>");
-			$(".result ul").html("");
+			$(".result").html("");
 		    for(var i=0; i<arr.length-1;i++){
 				var temp=arr[i].split("£");
 				var iniq=new Date(temp[1]*1000);
