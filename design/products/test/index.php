@@ -60,7 +60,7 @@
 
 <div class="all-elements">
     
-    <?php include './sidebar.php';?>
+    <?php include 'sidebar.php';?>
        
     <div id="content" class="page-content">
         <div class="page-header">
