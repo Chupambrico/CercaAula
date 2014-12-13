@@ -88,11 +88,10 @@ if ($result->num_rows > 0) {
 					}
 				}else{
 					while(date('w',$orafin[$i])!=date('w',$fin)){
-						echo date('w',$orafin[$i])." ".date('w',$fin)."<br>";
 						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 							VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
 						$conn->query($sql);
-						$$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
+						$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 					}
 					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
 						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$fin.")";
