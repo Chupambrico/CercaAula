@@ -150,7 +150,7 @@ function boomerang(){
 				var iniq=new Date(temp[1]*1000);
 				var finq=new Date(temp[2]*1000);
 				//$(".result ul").append("<li><div class='hours'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"</div><div class='room'>"+temp[0]+"</div></li>");
-				$(".result").append("<div class='small-notification yellow-notification'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"|"+temp[0]+"</div>");
+				$(".result").append("<div class='small-notification yellow-notification'><p>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"|"+temp[0]+"</p></div>");
 				
 			}
 		    

@@ -78,7 +78,7 @@
 			<select class="orafine">
 			</select>
 		</div>
-		<div id="az" class="container result">
+		<div class="container no-bottom result">
 			<ul>
 			</ul>
 		</div>
