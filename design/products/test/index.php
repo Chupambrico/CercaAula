@@ -61,12 +61,12 @@
 
 
 
-		<div class="all-elements">
+		<div class="all-elements wrapper">
 			
 			<?php include 'sidebar.php';?>
 			   
 			<div id="content" class="page-content">
-				<div class="wrapper">
+				
 					<div class="page-header">
 						<p class="logo location custom-location">
 							<img src="images/misc/logo.png" width="63">
@@ -92,16 +92,18 @@
 						<ul>
 						</ul>
 					</div>
-					<div class='push'></div>
-				</div>
+					
 				
-				<div class="footer">
+				
+				    
+			</div> 
+		</div>
+		<div class='push'></div>
+		<div class="footer">
 					<a href="#" class="footer-facebook"></a>
 					<a href="#" class="footer-twitter"></a>
 					<a href="#" class="footer-up go-up"></a>
 					<em>All rights reserved</em>
-				</div>     
-			</div> 
-		</div>
+				</div> 
 	</body>
 </html>
