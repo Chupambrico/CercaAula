@@ -24,7 +24,7 @@ $(window).bind("load", function() {
                 
                 //
        
-               if ( ($(document.body).height()+footerHeight) < /*$(window).height()*/1000) {
+               if ( ($conte.height()+footerHeight) < /*$(window).height()*/1000) {
                    $footer.css({
                         position: "absolute"
                    }).stop().animate({
@@ -37,10 +37,10 @@ $(window).bind("load", function() {
                }
 			   
 			   
-				if ( ($conte.height()) < $(window).height()) {
+				/*if ( ($conte.height()) < $(window).height()) {
 					var alt =$(window).height();
 					document.getElementById("content").style.height = alt;
-				}
+				}*/
        }
 
        $(window)
