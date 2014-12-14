@@ -39,7 +39,7 @@ $(window).bind("load", function() {
 			   
 				if ( ($conte.height()) < $(window).height()) {
 					var alt =$(window).height();
-					document.getElementById("content")..style.height = alt;
+					document.getElementById("content").style.height = alt;
 				}
        }
 
