@@ -19,20 +19,28 @@ html, body {
 }
 
 .all-elements {
-	display: table;
-	height: inherit;
-	width: 100%;
+  display: table;
+  height: inherit;
+  width: 100%;
 }
 
 .page-content{
-	display: table-cell;
-	width: inherit;
+  display: table;
+  width: inherit;
+  height: inherit;
 }
 
 .wrapper {
-	min-height: 100%;
+  display: table-row;
+  width: inherit;
 	margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
 }
+
 .push {
 	height: 60px; /* .push must be the same height as .footer */
+}
+
+.footer {
+  display: table-row;
+    height: 60px;
 }
