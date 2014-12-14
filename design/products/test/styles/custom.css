@@ -19,7 +19,7 @@ html, body {
 }
 
 .all-elements {
-	display: table;
+	height: 100%;
 }
 
 .page-content {
