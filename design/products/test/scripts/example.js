@@ -4,6 +4,7 @@ $(window).bind("load", function() {
        var footerHeight = 0,
            footerTop = 0,
            $footer = $("#footer");
+           $conte = $("#content");
            
        positionFooter();
        
@@ -34,7 +35,11 @@ $(window).bind("load", function() {
                         position: "static"
                    })
                }
-               
+			   
+			   
+				if ( ($conte.height()) < $(window).height()) {
+					$conte.style.height = $(window).height();
+				}
        }
 
        $(window)
