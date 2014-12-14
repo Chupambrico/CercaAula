@@ -19,20 +19,20 @@ html, body {
 }
 
 .all-elements {
-  display: table;
-  height: inherit;
-  width: 100%;
+	display: table;
+	height: inherit;
+	width: inherit;
 }
 
 .page-content{
-  display: table;
-  width: inherit;
-  height: inherit;
+	display: table;
+	width: inherit;
+	height: inherit;
 }
 
 .wrapper {
-  display: table-row;
-  width: inherit;
+	display: table-row;
+	width: inherit;
 	margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
 }
 
@@ -41,6 +41,6 @@ html, body {
 }
 
 .footer {
-  display: table-row;
-    height: 60px;
+	display: table-row;
+	height: 60px;
 }
