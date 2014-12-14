@@ -21,7 +21,7 @@ html, body {
 .all-elements {
 	display: table;
 	height: inherit;
-	width: inherit;
+	width: 100%;
 }
 
 .page-content{
