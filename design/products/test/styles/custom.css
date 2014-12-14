@@ -18,9 +18,15 @@ html, body {
 	height: 100%;
 }
 
-.all-elements, .page-content {
-	min-height: 100%;
-	position: absolute;
+.all-elements {
+	display: table;
+	height: inherit;
+	width: 100%;
+}
+
+.page-content{
+	display: table-cell;
+	width: inherit;
 }
 
 .wrapper {
