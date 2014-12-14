@@ -91,7 +91,6 @@
 						<ul>
 						</ul>
 					</div>
-					<div class="push"></div>
 				</div>
 				<div id="footer" class="footer">
 					<em>Footer</em>

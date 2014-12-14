@@ -5,7 +5,7 @@
 			<img width="63" alt="img" src="images/misc/logot.png" class="sidebar-logo">
 		</div>
 		
-		<p class="sidebar-separator">NAVIGATION</p>
+		<p class="sidebar-separator">POLI</p>
 		<a class="nav-item home-nav" href="#about">						Povo			<em class="<?php echo ($page=='p') ? "nav-onit" : "nav-page" ?>"></em></a>
 		<a class="nav-item home-nav" href="#about">						Mesiano			<em class="<?php echo ($page=='m') ? "nav-onit" : "nav-page" ?>"></em></a>
 		<a class="nav-item home-nav" href="#about">						Lettere			<em class="<?php echo ($page=='l') ? "nav-onit" : "nav-page" ?>"></em></a>
