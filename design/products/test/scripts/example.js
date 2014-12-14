@@ -38,7 +38,8 @@ $(window).bind("load", function() {
 			   
 			   
 				if ( ($conte.height()) < $(window).height()) {
-					$conte.style.height = $(window).height();
+					var alt =$(window).height();
+					$conte.style.height = alt;
 				}
        }
 
