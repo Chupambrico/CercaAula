@@ -14,8 +14,12 @@ html body div.all-elements div#content.page-content div.container.spazio-fondo.c
 	margin-bottom: 20px;
 }
 
-html, body, .all-elements, .page-content {
+html, body {
 	height: 100%;
+}
+
+.all-elements, .page-content {
+	min-height: 100%;
 }
 
 .wrapper {
