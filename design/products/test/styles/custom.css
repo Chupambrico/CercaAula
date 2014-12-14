@@ -14,7 +14,7 @@ html body div.all-elements div#content.page-content div.container.spazio-fondo.c
 	margin-bottom: 20px;
 }
 
-html, body {
+html, body, .all-elements, .page-content {
 	height: 100%;
 }
 

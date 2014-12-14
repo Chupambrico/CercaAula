@@ -46,7 +46,6 @@
 		<script src="scripts/custom.js"			 type="text/javascript"></script>
 		<script src="scripts/custom2.js"		 type="text/javascript"></script>
 		<script src="scripts/framework.js"		 type="text/javascript"></script>
-		<script src="scripts/example.js"			 type="text/javascript"></script>
 
 	</head>
 	<body>
@@ -67,29 +66,32 @@
 			<?php include 'sidebar.php';?>
 			   
 			<div id="content" class="page-content">
-				<div class="page-header">
-					<p class="logo location custom-location">
-					</p>
-					<a href="#" class="deploy-sidebar"></a>
-				</div>
-				<div class="container spazio-fondo center-text">
-					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-						<select class="custom-dropdown__select custom-dropdown__select--blue day">
-						</select>
-					</span>
-					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-						<select class="custom-dropdown__select custom-dropdown__select--blue orainizio">
-						</select>
-					</span>
-					<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
-						<select class="custom-dropdown__select custom-dropdown__select--blue orafine">
-						</select>
-					</span>
-				</div>
-				<div class='decoration'></div>
-				<div class="container result">
-					<ul>
-					</ul>
+				<div class="wrapper">
+					<div class="page-header">
+						<p class="logo location custom-location">
+						</p>
+						<a href="#" class="deploy-sidebar"></a>
+					</div>
+					<div class="container spazio-fondo center-text">
+						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+							<select class="custom-dropdown__select custom-dropdown__select--blue day">
+							</select>
+						</span>
+						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+							<select class="custom-dropdown__select custom-dropdown__select--blue orainizio">
+							</select>
+						</span>
+						<span class="custom-dropdown custom-dropdown--blue custom-dropdown--small">
+							<select class="custom-dropdown__select custom-dropdown__select--blue orafine">
+							</select>
+						</span>
+					</div>
+					<div class='decoration'></div>
+					<div class="container result">
+						<ul>
+						</ul>
+					</div>
+					<div class="push"></div>
 				</div>
 				<div id="footer" class="footer">
 					<em>Footer</em>
