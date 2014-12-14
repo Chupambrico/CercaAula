@@ -18,12 +18,9 @@ html, body {
 	height: 100%;
 }
 
-.all-elements {
-	height: 100%;
-}
-
-.page-content {
-	display: table-cell;
+.all-elements, .page-content {
+	min-height: 100%;
+	position: absolute;
 }
 
 .wrapper {
