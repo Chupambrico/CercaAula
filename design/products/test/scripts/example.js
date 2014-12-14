@@ -23,7 +23,7 @@ $(window).bind("load", function() {
                 
                 //
        
-               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+               if ( ($(document.body).height()+footerHeight) < /*$(window).height()*/1000) {
                    $footer.css({
                         position: "absolute"
                    }).stop().animate({
