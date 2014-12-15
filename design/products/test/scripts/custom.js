@@ -1,6 +1,4 @@
 $(document).ready(function(){
-	
-	
 	var snapper = new Snap({
 	  element: document.getElementById('content')
 	});
@@ -24,5 +22,4 @@ $(document).ready(function(){
 		}
 		return false;
 	});
-	
 });
