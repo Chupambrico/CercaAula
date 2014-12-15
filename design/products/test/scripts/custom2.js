@@ -132,10 +132,12 @@ function abomba(){
 			return;
 			}
 		if(polo!=""){
-		var url="../../../req.php?polo="+polo+"&orai="+begin+"&oraf="+end;
-		xmlhttpContenuti.onreadystatechange=boomerang;
-		xmlhttpContenuti.open("GET",url,true);
-		xmlhttpContenuti.send(null);
+			$(".result").html("");
+			$(".result").append("<p class='center-text'>Loading the content...</p>");
+			var url="../../../req.php?polo="+polo+"&orai="+begin+"&oraf="+end;
+			xmlhttpContenuti.onreadystatechange=boomerang;
+			xmlhttpContenuti.open("GET",url,true);
+			xmlhttpContenuti.send(null);
 		}
 }
 function boomerang(){
