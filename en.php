@@ -55,7 +55,6 @@ if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
 		while($notte<$fin){
-			echo $notte;
 			$sql = "INSERT INTO orariom (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
