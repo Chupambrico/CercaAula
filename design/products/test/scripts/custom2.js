@@ -72,7 +72,12 @@ $(document).ready(function () {
 		d = new Date();
 		var day = d.getDay(),
 		diff = d.getDate() - day + (day == 0 ? -6:1);
-		return new Date(d.setDate(diff));
+		d.setDate(diff);
+		d.setHours(0);
+		d.setMinutes(0);
+		d.setSeconds(0);
+		d.setMilliseconds(0);
+		return new Date(d);
 	}
 
 	function openClose(){
@@ -87,7 +92,6 @@ $(document).ready(function () {
 		iniz=getMonday();
 		iniz=iniz.getTime();
 		iniz=iniz/1000;
-		iniz=Math.floor(iniz);
 		g=$(".day").val();
 		hi=$(".orainizio").val();
 		hf=$(".orafine").val();
