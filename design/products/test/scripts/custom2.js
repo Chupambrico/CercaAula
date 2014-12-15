@@ -72,7 +72,7 @@ $(document).ready(function () {
 		d = new Date();
 		var day = d.getDay(),
 		diff = d.getDate() - day + (day == 0 ? -6:1);
-		return ((new Date(d.setDate(diff)).getTime())/1000);
+		return new Date(d.setDate(diff));
 	}
 
 	function openClose(){
@@ -85,6 +85,9 @@ $(document).ready(function () {
 	
 	function dataWeek(){
 		iniz=getMonday();
+		iniz=iniz.getTime();
+		iniz=iniz/1000;
+		iniz=Math.floor(iniz);
 		g=$(".day").val();
 		hi=$(".orainizio").val();
 		hf=$(".orafine").val();
