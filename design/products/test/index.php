@@ -87,7 +87,7 @@
 					</div>
 				</div>
 				<div id="footer" class="footer">
-					<em>Se non sono presenti aule libere <br>nel'intervallo di tempo da voi scelto potete sempre usufruire di <a href="http://web.unitn.it/biblioteca/10221/biblioteca-centrale" target="_blank">biblioteche e aule studio!</a></em>
+					<em class="center-text">Se non sono presenti aule libere <br>nel'intervallo di tempo da voi scelto potete sempre usufruire di <a href="http://web.unitn.it/biblioteca/10221/biblioteca-centrale" target="_blank">biblioteche e aule studio!</a></em>
 				</div>
 			</div>
 		</div>
