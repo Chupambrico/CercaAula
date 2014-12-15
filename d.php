@@ -33,6 +33,7 @@ foreach($arrary as $corso){
 		$str2=str_replace("//$(document).ready(function () {","",$str2);
 		$str2=str_replace("$('.dettaglio').usertip();","",$str2);
 		$str2=str_replace("//});","",$str2);
+		$str2 = preg_replace('!\s+!', ' ', $str2);
 		//Ora	
 		$orain=$x->start;
 		$orafin=$x->end;
