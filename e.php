@@ -64,7 +64,7 @@ $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
 $sql = "SELECT DISTINCT aula,polo FROM orario";
 $result = $conn->query($sql);
-
+echo"<pre>".print_r($result)."</pre>";
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
