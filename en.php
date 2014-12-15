@@ -34,7 +34,7 @@ if (mysqli_query($conn, $sql)) {
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
-$sql="INSERT INTO orariom SELECT NULL, aula, polo, orainizio, orafine, data FROM orario"; 
+$sql="INSERT INTO orariom (id, aula, polo, orainizio, orafine, data) SELECT NULL, aula, polo, orainizio, orafine, data FROM orario"; 
 $conn->query($sql);
 if (mysqli_query($conn, $sql)) {
 				//echo "New record created successfully<br>";
