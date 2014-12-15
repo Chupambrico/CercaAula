@@ -10,9 +10,12 @@ $conn = new mysqli($db_host, $db_user, $db_pass,$db_name);
 $iniz=1417388400;
 $fin=$iniz+604800;
 while((time()<$iniz)OR(time()>$fin)){
-	$iniz+=604800+21600;
-	$fin+=604800-3600;
+	$iniz+=604800;
+	$fin+=604800;
 }
+
+$iniz+=21600;
+$fin-=3600;
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -20,6 +23,17 @@ if (!$conn) {
 
 date_default_timezone_set('Europe/Rome');
 
+
+$cust["Polo Scientifico e Tecnologico Fabio Ferrari"]="Povo";
+$cust["Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO"]="Povo";
+$cust["Palazzo Fedrigotti, c.so Bettini 31 ROVERETO"]="Rovereto";
+$cust["Palazzo Istruzione, c.so Bettini 84, ROVERETO"]="Rovereto";
+$cust["Facolta di Economia, via Inama 5"]="Economia";
+$cust["Facolta di Lettere e Filosofia, via T. Gar"]="Lettere";
+$cust["Facolta di Ingegneria, Mesiano"]="Mesiano";
+$cust["Biblioteca di Ingegneria, Mesiano"]="Mesiano";
+$cust["Facolta di Sociologia, via Verdi 26"]="Sociologia";
+/*
 $up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
 $up[1]="Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO";
 $up[2]="Palazzo Fedrigotti, c.so Bettini 31 ROVERETO";
@@ -43,7 +57,7 @@ for($i=0;$i<count($up);$i++){
 	$sql="UPDATE orario SET polo='".$gup[$i]."' WHERE polo='".$up[$i]."'";
 	$conn->query($sql);
 }
-	
+	*/
 $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
 $sql = "SELECT DISTINCT aula,polo FROM orario";
@@ -64,39 +78,39 @@ if ($result->num_rows > 0) {
 				$i++;
 			}
 			while(date('w',$iniztemp)!=date('w',$orain[0])){
-				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-					VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniztemp.",".((strtotime(date('d-m-Y',$iniztemp)))+82800).")";
+				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+					VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".((strtotime(date('d-m-Y',$iniztemp)))+82800).",".$row["polo"].")";
 				$conn->query($sql);
 				$iniztemp=(strtotime(date('d-m-Y',$iniztemp)))+104400;
 			}
-			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-				VALUES ('".$row["aula"]."','".$row["polo"]."',".$iniztemp.",".$orain[0].")";
+			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+				VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".$orain[0].",".$row["polo"].")";
 			$conn->query($sql);
 			for($i=0;$i<count($orain);$i++){
 				if($i+1!=count($orain)){
 					if($orain[$i+1]!=$orafin[$i]){
 						//if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 							while(date('w',$orafin[$i])!=date('w',$orain[$i+1])){
-								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-									VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
+								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+									VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).",".$row["polo"].")";
 								$conn->query($sql);
 								$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 							}
 						//}else{
-							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-								VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$orain[$i+1].")";
+							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+								VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$orain[$i+1].",".$row["polo"].")";
 							$conn->query($sql);
 						//}
 					}
 				}else{
 					while(date('w',$orafin[$i])!=date('w',$fintemp)){
-						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-							VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
+						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+							VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).",".$row["polo"].")";
 						$conn->query($sql);
 						$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 					}
-					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
-						VALUES ('".$row["aula"]."','".$row["polo"]."',".$orafin[$i].",".$fintemp.")";
+					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+						VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$fintemp.",".$row["polo"].")";
 					$conn->query($sql);
 				}
 			}
