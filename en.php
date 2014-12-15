@@ -29,7 +29,7 @@ $cust = array(
 
 $sql="TRUNCATE TABLE orariom";
 $conn->query($sql);
-$sql="SELECT * INTO orariom FROM orario";
+$sql="SELECT aula, polo, orainizio, orafine, data INTO orariom FROM orario";
 $conn->query($sql);
 $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
