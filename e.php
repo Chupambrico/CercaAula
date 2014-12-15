@@ -80,58 +80,40 @@ if ($result->num_rows > 0) {
 				$i++;
 			}
 			while(date('w',$iniztemp)!=date('w',$orain[0])){
-				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-					VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".((strtotime(date('d-m-Y',$iniztemp)))+82800).",".$row["polo"].")";
+				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+					VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".((strtotime(date('d-m-Y',$iniztemp)))+82800).")";
 				$conn->query($sql);
-				if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 				$iniztemp=(strtotime(date('d-m-Y',$iniztemp)))+104400;
 			}
-			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-				VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".$orain[0].",".$row["polo"].")";
+			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+				VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniztemp.",".$orain[0].")";
 			$conn->query($sql);
-			if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 			for($i=0;$i<count($orain);$i++){
 				if($i+1!=count($orain)){
 					if($orain[$i+1]!=$orafin[$i]){
 						//if(date('w',$orain[$i+1])!=date('w',$orafin[$i])){
 							while(date('w',$orafin[$i])!=date('w',$orain[$i+1])){
-								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-									VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).",".$row["polo"].")";
+								$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+									VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
 								$conn->query($sql);
-								if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 								$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 							}
 						//}else{
-							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-								VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$orain[$i+1].",".$row["polo"].")";
+							$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+								VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$orain[$i+1].")";
 							$conn->query($sql);
-							if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 						//}
 					}
 				}else{
 					while(date('w',$orafin[$i])!=date('w',$fintemp)){
-						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-							VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).",".$row["polo"].")";
+						$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+							VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".((strtotime(date('d-m-Y',$orafin[$i])))+82800).")";
 						$conn->query($sql);
-						if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 						$orafin[$i]=(strtotime(date('d-m-Y',$orafin[$i])))+104400;
 					}
-					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-						VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$fintemp.",".$row["polo"].")";
+					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine)
+						VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[$i].",".$fintemp.")";
 					$conn->query($sql);
-					if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 				}
 			}
 		}
