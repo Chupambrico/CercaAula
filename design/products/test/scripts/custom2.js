@@ -22,8 +22,19 @@ var d = new Date();
 var n = d.getTime()/1000; 
 var begin,end;
 var polo="";
+var g;
+var hi;
+var hf;
+var secg;
+var sechi;
+var sechf;
 
 $(document).ready(function () {
+	var snapper = new Snap({
+		element: document.getElementById('content')
+	});
+	snapper.open('left');
+	
     while(n>=(iniz+604800)){
 		iniz+=604800;	
 	}
@@ -36,12 +47,7 @@ $(document).ready(function () {
 		$(".orafine").append("<option value="+(i+1)+">"+(i+1)+":00</option>");
 	}
 	
-	var g;
-	var hi;
-	var hf;
-	var secg;
-	var sechi;
-	var sechf;
+	
 	dataWeek();
 		
 	function dataWeek(){
@@ -63,14 +69,8 @@ $(document).ready(function () {
 
 
 
-	var snapper = new Snap({
-		element: document.getElementById('content')
-	});
-	if( snapper.state().state=="left" ){
-		snapper.close();
-	} else {
-		snapper.open('left');
-	}
+	
+	
 	
 	$(".page-sidebar a").on("click", function(e){  
 		e.preventDefault();  
@@ -83,8 +83,8 @@ $(document).ready(function () {
 			} else {
 				snapper.open('left');
 			}
-			var roba=$(this).html().split("<em");
-			polo=roba[0];		   
+			var sidepolo=$(this).html().split("<em");
+			polo=sidepolo[0];		   
 			abomba();
 		}
 	});
