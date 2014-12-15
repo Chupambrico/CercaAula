@@ -11,24 +11,19 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+$polo=$_GET["polo"];
+$orai=$_GET["orai"];
+$oraf=$_GET["oraf"];
 
-	
-	$polo=$_GET["polo"];
-	$orai=$_GET["orai"];
-	$oraf=$_GET["oraf"];
-	
-	$sql = "SELECT DISTINCT aula,orainizio,orafine,edificio FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf.")";
-	$result = $conn->query($sql);
-	if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			//echo $row["aula"]."/".date("G:i",$row["orainizio"])."/".date("G:i",$row["orafine"])."<removekebab>";
-			echo $row["aula"]."£".$row["orainizio"]."£".$row["orafine"]."£".$row["polo"]."£".$row["edificio"]."<removekebab>";
-			}
-     
-	} else {
-		echo "0 results";
+$sql = "SELECT DISTINCT aula,orainizio,orafine,edificio FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf.")";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		echo $row["aula"]."£".$row["orainizio"]."£".$row["orafine"]."£".$row["edificio"]."<removekebab>";
 	}
-	
-	$conn->close();		
+} else {
+	echo "0 results";
+}
+
+$conn->close();		
 ?>

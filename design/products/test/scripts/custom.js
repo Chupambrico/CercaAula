@@ -130,7 +130,7 @@ function boomerang(){
 			var temp=arr[i].split("£");
 			var iniq=new Date(temp[1]*1000);
 			var finq=new Date(temp[2]*1000);
-			$(".result").append("<div class='container'><h4 class='heading left-text'>"+temp[0]+"</h4><p class='left-text'>"+temp[4]+"<br>Libera fino alle "+finq.getHours()+":"+(finq.getMinutes()<10?'0':'')+finq.getMinutes()+"</p></div><div class='decoration'></div>");
+			$(".result").append("<div class='container'><h4 class='heading left-text'>"+temp[0]+"</h4><p class='left-text'>"+temp[3]+"<br>Libera dalle "+iniq.getHours()+":"+(iniq.getMinutes()<10?'0':'')+iniq.getMinutes()+" fino alle "+finq.getHours()+":"+(finq.getMinutes()<10?'0':'')+finq.getMinutes()+"</p></div><div class='decoration'></div>");
 		}	
 	}
 }
