@@ -73,7 +73,7 @@ $(document).ready(function () {
 		d = new Date();
 		var day = d.getDay(),
 		diff = d.getDate() - day + (day == 0 ? -6:1);
-		return new ((Date(d.setDate(diff)).getTime())/1000);
+		return ((new Date(d.setDate(diff)).getTime())/1000);
 	}
 
 	function openClose(){
