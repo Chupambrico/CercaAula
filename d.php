@@ -23,11 +23,9 @@ $arrary= array(10116,10232,10168,10493,10126,10128,10129,10136,10176,10178,10179
 10235,10055,10177);
 foreach($arrary as $corso){
 	$homepage = file_get_contents('http://webapps.unitn.it/Orari/it/Web/AjaxEventi/c/'.$corso.'-/agendaWeek?_=1417633155537&start='.$iniz.'&end='.$fin);
-	$o=0;
 	$json=json_decode($homepage);
 	foreach($json->Eventi as $x){
 		$url=substr($x->url,1);
-		$o++;
 		$detail = file_get_contents('http://webapps.unitn.it/Orari/it/Web/DettaglioImpegno/'.$url);
 		
 		$strin=$detail;
@@ -46,13 +44,10 @@ foreach($arrary as $corso){
 		$strlen2 = count($arr);
 		$text2=explode('</p>',$text[$pos12]);
 		
-		//echo "<pre>".print_r($text2)."</pre>";
 		$pos = strpos($text2[0],"p>");
 
 		if ($pos === false) {
 			$tmp=preg_split("/[\()]+/",$text2[0]);
-			//echo "<pre>".$tmp[0]."---".$tmp[1]."---".print_r(str_split($tmp[2]))."</pre>";
-			//echo "<pre>".print_r($tmp)."</pre>";
 			for($i=0;$i<count($tmp);$i++){  
 				if(($tmp[$i]==" ") and (count($tmp)>($i+1))){
 					unset($tmp[$i]);
@@ -61,18 +56,17 @@ foreach($arrary as $corso){
 			}
 			$tmp = array_merge(array(),$tmp);
 			for($i=-1;$i<count($tmp)-2;$i++){
-			$i++;
-			$data=date("Y-m-d",$orain);
-			$polo=str_replace("à","a",$tmp[$i+1]);
-			$sql = "INSERT INTO orario (aula, polo, orainizio, orafine,data)
-			 VALUES ('".substr($tmp[$i],16)."','".$polo."',".$orain.",".$orafin.",'".$data."')";
+				$i++;
+				$data=date("Y-m-d",$orain);
+				$polo=str_replace("à","a",$tmp[$i+1]);
+				$sql = "INSERT INTO orario (aula, polo, orainizio, orafine,data)
+				 VALUES ('".substr($tmp[$i],16)."','".$polo."',".$orain.",".$orafin.",'".$data."')";
 
-			if (mysqli_query($conn, $sql)) {
-				echo "New record created successfully<br>";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
-			}
-			// echo "#".$o."<br>&nbsp;&nbsp;&nbsp;&nbsp;".$orain."<br>&nbsp;&nbsp;&nbsp;&nbsp;".$orafin."<br>&nbsp;&nbsp;&nbsp;&nbsp;".substr($tmp[$i],16)."<br>&nbsp;&nbsp;&nbsp;&nbsp;".$tmp[$i+1]."<br><br>";
+				if (mysqli_query($conn, $sql)) {
+					echo "New record created successfully<br>";
+				} else {
+					echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+				}
 			}
 		}
 	}
