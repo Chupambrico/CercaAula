@@ -23,7 +23,7 @@ if (!$conn) {
 
 date_default_timezone_set('Europe/Rome');
 
-$cust = [
+$cust = array(
     "Polo Scientifico e Tecnologico Fabio Ferrari" => "Povo",
     "Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO" => "Povo",
     "Palazzo Fedrigotti, c.so Bettini 31 ROVERETO" => "Rovereto",
@@ -33,7 +33,7 @@ $cust = [
     "Facolta di Ingegneria, Mesiano" => "Mesiano",
     "Biblioteca di Ingegneria, Mesiano" => "Mesiano",
     "Facolta di Sociologia, via Verdi 26" => "Sociologia",
-];
+);
 
 /*
 $up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
