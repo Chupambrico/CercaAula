@@ -29,10 +29,25 @@ $cust = array(
 
 $sql="TRUNCATE TABLE orariom";
 $conn->query($sql);
+if (mysqli_query($conn, $sql)) {
+				//echo "New record created successfully<br>";
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+			}
 $sql="SELECT aula, polo, orainizio, orafine, data INTO orariom FROM orario";
 $conn->query($sql);
+if (mysqli_query($conn, $sql)) {
+				//echo "New record created successfully<br>";
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+			}
 $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
+if (mysqli_query($conn, $sql)) {
+				//echo "New record created successfully<br>";
+			} else {
+				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+			}
 $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
