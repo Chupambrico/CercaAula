@@ -33,7 +33,6 @@ foreach($arrary as $corso){
 		$str2=str_replace("//$(document).ready(function () {","",$str2);
 		$str2=str_replace("$('.dettaglio').usertip();","",$str2);
 		$str2=str_replace("//});","",$str2);
-		$str2 = preg_replace('!\s+!', ' ', $str2);
 		//Ora	
 		$orain=$x->start;
 		$orafin=$x->end;
@@ -61,7 +60,7 @@ foreach($arrary as $corso){
 				$data=date("Y-m-d",$orain);
 				$polo=str_replace("à","a",$tmp[$i+1]);
 				$sql = "INSERT INTO orario (aula, polo, orainizio, orafine,data)
-				 VALUES ('".substr($tmp[$i],16)."','".$polo."',".$orain.",".$orafin.",'".$data."')";
+				 VALUES ('".preg_replace('!\s+!', ' ', (substr($tmp[$i],16)))."','".$polo."',".$orain.",".$orafin.",'".$data."')";
 
 				if (mysqli_query($conn, $sql)) {
 					echo "New record created successfully<br>";
