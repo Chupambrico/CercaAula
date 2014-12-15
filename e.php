@@ -23,7 +23,7 @@ if (!$conn) {
 
 date_default_timezone_set('Europe/Rome');
 
-$cust = [
+/*$cust = [
     "Polo Scientifico e Tecnologico Fabio Ferrari" => "Povo",
     "Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO" => "Povo",
     "Palazzo Fedrigotti, c.so Bettini 31 ROVERETO" => "Rovereto",
@@ -33,7 +33,7 @@ $cust = [
     "Facolta di Ingegneria, Mesiano" => "Mesiano",
     "Biblioteca di Ingegneria, Mesiano" => "Mesiano",
     "Facolta di Sociologia, via Verdi 26" => "Sociologia",
-];
+];*/
 
 /*
 $up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
@@ -67,7 +67,7 @@ $result = $conn->query($sql);
 echo"<pre>".print_r($result)."</pre>";
 if ($result->num_rows > 0) {
 	// output data of each row
-	while($row = $result->fetch_assoc()) {
+	/*while($row = $result->fetch_assoc()) {
 	$iniztemp=$iniz;
 	$fintemp=$fin;
 	$sql = "SELECT DISTINCT orainizio,orafine FROM orario WHERE orario.aula='".$row["aula"]."' AND orario.polo='".$row["polo"]."' ORDER BY orario.orainizio";
@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
 				}
 			}
 		}
-	}
+	}*/
 } else {
 	echo "0 results";
 }
