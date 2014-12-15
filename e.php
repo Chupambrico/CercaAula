@@ -23,16 +23,18 @@ if (!$conn) {
 
 date_default_timezone_set('Europe/Rome');
 
+$cust = [
+    "Polo Scientifico e Tecnologico Fabio Ferrari" => "Povo",
+    "Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO" => "Povo",
+    "Palazzo Fedrigotti, c.so Bettini 31 ROVERETO" => "Rovereto",
+    "Palazzo Istruzione, c.so Bettini 84, ROVERETO" => "Rovereto",
+    "Facolta di Economia, via Inama 5" => "Economia",
+    "Facolta di Lettere e Filosofia, via T. Gar" => "Lettere",
+    "Facolta di Ingegneria, Mesiano" => "Mesiano",
+    "Biblioteca di Ingegneria, Mesiano" => "Mesiano",
+    "Facolta di Sociologia, via Verdi 26" => "Sociologia",
+];
 
-$cust["Polo Scientifico e Tecnologico Fabio Ferrari"]="Povo";
-$cust["Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO"]="Povo";
-$cust["Palazzo Fedrigotti, c.so Bettini 31 ROVERETO"]="Rovereto";
-$cust["Palazzo Istruzione, c.so Bettini 84, ROVERETO"]="Rovereto";
-$cust["Facolta di Economia, via Inama 5"]="Economia";
-$cust["Facolta di Lettere e Filosofia, via T. Gar"]="Lettere";
-$cust["Facolta di Ingegneria, Mesiano"]="Mesiano";
-$cust["Biblioteca di Ingegneria, Mesiano"]="Mesiano";
-$cust["Facolta di Sociologia, via Verdi 26"]="Sociologia";
 /*
 $up[0]="Polo Scientifico e Tecnologico Fabio Ferrari";
 $up[1]="Facolta di Scienze Ed. Potenziamento su campo sportivo, via Sommarive 14  POVO";
