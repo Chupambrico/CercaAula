@@ -5,16 +5,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<!--Declare page as mobile friendly --> 
 		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
-		<!-- Declare page as iDevice WebApp friendly -->
-		<meta name="apple-mobile-web-app-capable" content="yes"/>
-		<!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png"> 
-		<!-- iPhone 3, 3Gs -->
-		<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 			media="screen and (max-device-width: 320px)" /> 
-		<!-- iPhone 4 -->
-		<link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" 		media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
-		<!-- iPhone 5 -->
-		<link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
 
 		<!-- Page Title -->
 		<title>Cerca Aula</title>

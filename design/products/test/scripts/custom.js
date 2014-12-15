@@ -67,42 +67,42 @@ $(document).ready(function () {
 		openClose();
 		return false;
 	});
-	
-	function getMonday() {
-		d = new Date();
-		var day = d.getDay(),
-		diff = d.getDate() - day + (day == 0 ? -6:1);
-		d.setDate(diff);
-		d.setHours(0);
-		d.setMinutes(0);
-		d.setSeconds(0);
-		d.setMilliseconds(0);
-		return new Date(d);
-	}
-
-	function openClose(){
-		if( snapper.state().state=="left" ){
-			snapper.close();
-		} else {
-			snapper.open('left');
-		}
-	}
-	
-	function dataWeek(){
-		iniz=getMonday();
-		iniz=iniz.getTime();
-		iniz=iniz/1000;
-		g=$(".day").val();
-		hi=$(".orainizio").val();
-		hf=$(".orafine").val();
-		secg= week[g]*(3600*24);
-		sechi= hi*3600;
-		sechf= hf*3600;
-		begin= secg+sechi+iniz;
-		end=secg+sechf+iniz;
-	}
 });
 
+function getMonday() {
+	d = new Date();
+	var day = d.getDay(),
+	diff = d.getDate() - day + (day == 0 ? -6:1);
+	d.setDate(diff);
+	d.setHours(0);
+	d.setMinutes(0);
+	d.setSeconds(0);
+	d.setMilliseconds(0);
+	return new Date(d);
+}
+
+function openClose(){
+	if( snapper.state().state=="left" ){
+		snapper.close();
+	} else {
+		snapper.open('left');
+	}
+}
+
+function dataWeek(){
+	iniz=getMonday();
+	iniz=iniz.getTime();
+	iniz=iniz/1000;
+	g=$(".day").val();
+	hi=$(".orainizio").val();
+	hf=$(".orafine").val();
+	secg= week[g]*(3600*24);
+	sechi= hi*3600;
+	sechf= hf*3600;
+	begin= secg+sechi+iniz;
+	end=secg+sechf+iniz;
+}
+	
 function abomba(){
 	xmlhttpContenuti=GetXmlHttpObject();
 	if (xmlhttpContenuti==null){
