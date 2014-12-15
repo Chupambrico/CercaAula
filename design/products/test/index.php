@@ -57,7 +57,7 @@
 			<?php include 'sidebar.php';?>
 			   
 			<div id="content" class="page-content">
-				<div class="wrapper">
+				<div>
 					<div class="page-header">
 						<p class="logo location custom-location">
 						</p>
