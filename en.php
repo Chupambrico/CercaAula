@@ -43,14 +43,16 @@ $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+	echo (($result->num_rows)*7)."<br>";
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
+		$contat=0;
 		while($notte<$fin){
 			$sql = "INSERT INTO orariom (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
 			if (mysqli_query($conn, $sql)) {
-				echo "New record created successfully<br>";
+				//echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
@@ -58,12 +60,14 @@ if ($result->num_rows > 0) {
 			 VALUES ('".$row['aula']."','".$row['polo']."',".($notte+72000).",".($notte+86400).")";
 
 			if (mysqli_query($conn, $sql)) {
-				echo "New record created successfully<br>";
+				//echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
 			$notte+=86400;
+			$contat++;
 		}
+		echo $contat;
 		$iniztemp=$iniz;
 		$fintemp=$fin;
 		$sql = "SELECT DISTINCT orainizio,orafine FROM orariom WHERE orariom.aula='".$row["aula"]."' AND orariom.polo='".$row["polo"]."' ORDER BY orariom.orainizio";
@@ -75,9 +79,11 @@ if ($result->num_rows > 0) {
 				$orafin[$i]=$col["orafine"];
 				$i++;
 			}
-			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-				VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniz.",".$orain[0].",'".$row["polo"]."')";
-			$conn->query($sql);
+			if($iniz!=$orain[0]){
+				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+					VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$iniz.",".$orain[0].",'".$row["polo"]."')";
+				$conn->query($sql);
+			}
 			for($i=0;$i<(count($orain)-1);$i++){
 				if($orain[$i+1]!=$orafin[$i]){
 					$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
@@ -85,9 +91,11 @@ if ($result->num_rows > 0) {
 					$conn->query($sql);
 				}
 			}
-			$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
-				VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[(count($orain)-1)].",".$fin.",'".$row["polo"]."')";
-			$conn->query($sql);
+			if($orafin[(count($orain)-1)]!=$fin){
+				$sql = "INSERT INTO freeaula (aula, polo, orainizio, orafine, edificio)
+					VALUES ('".$row["aula"]."','".$cust[$row["polo"]]."',".$orafin[(count($orain)-1)].",".$fin.",'".$row["polo"]."')";
+				$conn->query($sql);
+			}
 		}
 	}
 } else {
