@@ -37,7 +37,7 @@ if ($result->num_rows > 0) {
 		$notte = $iniz;
 		while($notte<$fin){
 			echo $notte;
-			$sql = "INSERT INTO orario (aula, polo, orainizio, orafine)
+			$sql = "INSERT INTO orariom (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
 			if (mysqli_query($conn, $sql)) {
@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
-			$sql = "INSERT INTO orario (aula, polo, orainizio, orafine)
+			$sql = "INSERT INTO orariom (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".($notte+72000).",".($notte+86400).")";
 
 			if (mysqli_query($conn, $sql)) {

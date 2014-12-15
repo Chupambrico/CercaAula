@@ -6,16 +6,15 @@ $db_name = 'fw42'; //this is the database I created in PhpMyAdmin
 
 $conn = new mysqli($db_host, $db_user, $db_pass,$db_name);
 
-$iniz=1417388400;
-$fin=$iniz+604800;
-if((time()<$iniz)OR(time()>$fin)){
-	$iniz+=604800;
-	$fin+=604800;
-}
-
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
+date_default_timezone_set('Europe/Rome');
+
+$iniz=strtotime('last monday', strtotime('tomorrow'));;
+$fin=strtotime('next monday', strtotime('today'));;
+
 $sql="TRUNCATE TABLE orario";
 $conn->query($sql);
 
