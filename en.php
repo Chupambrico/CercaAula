@@ -42,7 +42,7 @@ if (!(mysqli_query($conn, $sql))) {
 $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
-/*if ($result->num_rows > 0) {
+if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
 		while($notte<$fin){
@@ -50,7 +50,7 @@ $result = $conn->query($sql);
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
 			if (mysqli_query($conn, $sql)) {
-				//echo "New record created successfully<br>";
+				echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
@@ -58,7 +58,7 @@ $result = $conn->query($sql);
 			 VALUES ('".$row['aula']."','".$row['polo']."',".($notte+72000).",".($notte+86400).")";
 
 			if (mysqli_query($conn, $sql)) {
-				//echo "New record created successfully<br>";
+				echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
@@ -92,6 +92,6 @@ $result = $conn->query($sql);
 	}
 } else {
 	echo "0 results";
-}*/
+}
 $conn->close()
 ?>
