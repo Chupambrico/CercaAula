@@ -15,7 +15,7 @@ while((time()<$iniz)OR(time()>$fin)){
 }
 
 $iniz+=21600;
-$fin-=3600;
+$fin-=14400;
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
