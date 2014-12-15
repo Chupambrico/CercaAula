@@ -74,6 +74,11 @@ $(document).ready(function() {
 	var snapper = new Snap({
 	  element: document.getElementById('content')
 	});
+	if( snapper.state().state=="left" ){
+		snapper.close();
+	} else {
+		snapper.open('left');
+	}
 	
 	 $(".page-sidebar a").on("click", function(e){  
 			 e.preventDefault();  
