@@ -33,7 +33,6 @@ $(document).ready(function () {
 		$(".orafine").append("<option value="+(i+1)+">"+(i+1)+":00</option>");
 	}
 	
-	iniz=getMonday();
 	dataWeek();
 	
 	$(".day, .orainizio, .orafine").change(function () {
@@ -85,6 +84,7 @@ $(document).ready(function () {
 	}
 	
 	function dataWeek(){
+		iniz=getMonday();
 		g=$(".day").val();
 		hi=$(".orainizio").val();
 		hf=$(".orafine").val();
