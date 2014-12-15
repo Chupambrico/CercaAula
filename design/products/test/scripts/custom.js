@@ -23,23 +23,6 @@ $(document).ready(function(){
 			snapper.open('left');
 		}
 		return false;
-	});
-
-			
-	$('.bxslider').bxSlider({
-		pager:false,
-		controls:true,
-		touchEnabed:true,
-		infiniteLoop: true,
-		preventDefaultSwipeX:true
-	});	
-	
-	$('.bx-next').click(function(){
-		return false;
-	});
-	
-	$('.bx-prev').click(function(){
-		return false;
 	});	
 	
 	$('.page-coach').hide();
