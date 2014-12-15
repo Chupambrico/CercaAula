@@ -67,6 +67,14 @@ $(document).ready(function () {
 		openClose();
 		return false;
 	});
+	
+	function openClose(){
+		if( snapper.state().state=="left" ){
+			snapper.close();
+		} else {
+			snapper.open('left');
+		}
+	}
 });
 
 function getMonday() {
@@ -79,14 +87,6 @@ function getMonday() {
 	d.setSeconds(0);
 	d.setMilliseconds(0);
 	return new Date(d);
-}
-
-function openClose(){
-	if( snapper.state().state=="left" ){
-		snapper.close();
-	} else {
-		snapper.open('left');
-	}
 }
 
 function dataWeek(){
