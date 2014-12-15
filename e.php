@@ -68,7 +68,6 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
-	echo"<pre>".print_r($row)."</pre>";
 	$iniztemp=$iniz;
 	$fintemp=$fin;
 	$sql = "SELECT DISTINCT orainizio,orafine FROM orario WHERE orario.aula='".$row["aula"]."' AND orario.polo='".$row["polo"]."' ORDER BY orario.orainizio";
@@ -76,6 +75,7 @@ if ($result->num_rows > 0) {
 		if ($aulas->num_rows > 0) {
 			$i=0;
 			while($col = $aulas->fetch_assoc()) {
+	echo"<pre>".print_r($col)."</pre>";
 				$orain[$i]=$col["orainizio"];
 				$orafin[$i]=$col["orafine"];
 				$i++;
