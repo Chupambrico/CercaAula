@@ -64,10 +64,11 @@ $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
 $sql = "SELECT DISTINCT aula,polo FROM orario";
 $result = $conn->query($sql);
-echo"<pre>".print_r($result)."</pre>";
+
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
+	echo"<pre>".print_r($row)."</pre>";
 	$iniztemp=$iniz;
 	$fintemp=$fin;
 	$sql = "SELECT DISTINCT orainizio,orafine FROM orario WHERE orario.aula='".$row["aula"]."' AND orario.polo='".$row["polo"]."' ORDER BY orario.orainizio";
