@@ -15,7 +15,7 @@ $polo=$_GET["polo"];
 $orai=$_GET["orai"];
 $oraf=$_GET["oraf"];
 
-$sql = "SELECT DISTINCT aula,orainizio,orafine,edificio FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf." ORDER BY freeaula.aula)";
+$sql = "SELECT DISTINCT aula,orainizio,orafine,edificio FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf.") ORDER BY freeaula.aula";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
