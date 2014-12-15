@@ -51,7 +51,7 @@ if (mysqli_query($conn, $sql)) {
 $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
+/*if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
 		while($notte<$fin){
@@ -101,6 +101,6 @@ if ($result->num_rows > 0) {
 	}
 } else {
 	echo "0 results";
-}
+}*/
 $conn->close()
 ?>
