@@ -36,11 +36,12 @@ if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
 		while($notte<$fin){
+			echo $notte;
 			$sql = "INSERT INTO orario (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
 			if (mysqli_query($conn, $sql)) {
-				echo "New record created successfully<br>";
+				//echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
@@ -48,7 +49,7 @@ if ($result->num_rows > 0) {
 			 VALUES ('".$row['aula']."','".$row['polo']."',".($notte+72000).",".($notte+86400).")";
 
 			if (mysqli_query($conn, $sql)) {
-				echo "New record created successfully<br>";
+				//echo "New record created successfully<br>";
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
