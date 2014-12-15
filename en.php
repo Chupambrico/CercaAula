@@ -43,10 +43,8 @@ $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-	echo (($result->num_rows)*7)."<br>";
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
-		$contat=0;
 		while($notte<$fin){
 			$sql = "INSERT INTO orariom (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
@@ -65,7 +63,6 @@ if ($result->num_rows > 0) {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
 			$notte+=86400;
-			$contat++;
 		}
 		echo $contat;
 		$iniztemp=$iniz;
