@@ -10,7 +10,7 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-/*date_default_timezone_set('Europe/Rome');
+date_default_timezone_set('Europe/Rome');
 
 $iniz=strtotime('last monday', strtotime('tomorrow'));;
 $fin=strtotime('next monday', strtotime('today'));;
@@ -25,7 +25,7 @@ $cust = array(
     "Facolta di Ingegneria, Mesiano" => "Mesiano",
     "Biblioteca di Ingegneria, Mesiano" => "Mesiano",
     "Facolta di Sociologia, via Verdi 26" => "Sociologia",
-);*/
+);
 
 $sql="TRUNCATE TABLE orariom";
 $conn->query($sql);
@@ -41,7 +41,7 @@ if (mysqli_query($conn, $sql)) {
 			} else {
 				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
 			}
-/*$sql="TRUNCATE TABLE freeaula";
+$sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
 if (mysqli_query($conn, $sql)) {
 				//echo "New record created successfully<br>";
@@ -50,8 +50,8 @@ if (mysqli_query($conn, $sql)) {
 			}
 $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
-*/
-/*if ($result->num_rows > 0) {
+
+if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
 		while($notte<$fin){
@@ -101,6 +101,6 @@ $result = $conn->query($sql);
 	}
 } else {
 	echo "0 results";
-}*/
+}
 $conn->close()
 ?>
