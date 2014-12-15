@@ -30,16 +30,6 @@ html, body {
 	height: inherit;
 }
 
-.wrapper {
-	display: table-row;
-	width: inherit;
-	margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
-}
-
-.push {
-	height: 60px; /* .push must be the same height as .footer */
-}
-
 .footer {
 	display: table-row;
 	height: 60px;
