@@ -66,28 +66,26 @@ $(document).ready(function () {
 		abomba();
     });
 
-
-
-
-	
-	
-	
 	$(".page-sidebar a").on("click", function(e){  
 		e.preventDefault();  
 		var hrefval = $(this).attr("href");  
 			   
 		if(hrefval == "#about") {   
 			$(".location").html($(this).html());
-			if( snapper.state().state=="left" ){
-				snapper.close();
-			} else {
-				snapper.open('left');
-			}
+			openClose();
 			var sidepolo=$(this).html().split("<em");
 			polo=sidepolo[0];		   
 			abomba();
 		}
 	});
+	
+	function openClose(){
+		if( snapper.state().state=="left" ){
+			snapper.close();
+		} else {
+			snapper.open('left');
+		}
+	}
 });
 
 
