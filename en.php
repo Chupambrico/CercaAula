@@ -27,9 +27,13 @@ $cust = array(
     "Facolta di Sociologia, via Verdi 26" => "Sociologia",
 );
 
+$sql="TRUNCATE TABLE orariom";
+$conn->query($sql);
+$sql="SELECT * INTO orariom FROM orario";
+$conn->query($sql);
 $sql="TRUNCATE TABLE freeaula";
 $conn->query($sql);
-$sql = "SELECT DISTINCT aula,polo FROM orario";
+$sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -57,7 +61,7 @@ if ($result->num_rows > 0) {
 		}
 		$iniztemp=$iniz;
 		$fintemp=$fin;
-		$sql = "SELECT DISTINCT orainizio,orafine FROM orario WHERE orario.aula='".$row["aula"]."' AND orario.polo='".$row["polo"]."' ORDER BY orario.orainizio";
+		$sql = "SELECT DISTINCT orainizio,orafine FROM orariom WHERE orariom.aula='".$row["aula"]."' AND orariom.polo='".$row["polo"]."' ORDER BY orariom.orainizio";
 		$aulas = $conn->query($sql);
 		if ($aulas->num_rows > 0) {
 			$i=0;
