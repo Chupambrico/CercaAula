@@ -17,28 +17,20 @@ comp[2]="mer";
 comp[3]="gio";
 comp[4]="ven";
 
-var iniz=1417388400;
+var iniz;
 var d = new Date();
 var n = d.getTime()/1000; 
-var begin,end;
+var begin,end,g,hi,hf,secg,sechi,sechf;
 var polo="";
-var g;
-var hi;
-var hf;
-var secg;
-var sechi;
-var sechf;
 
 $(document).ready(function () {
+	iniz=getMonday();
+	
 	var snapper = new Snap({
 		element: document.getElementById('content')
 	});
 	snapper.open('left');
 	
-    while(n>=(iniz+604800)){
-		iniz+=604800;	
-	}
-
 	for(var i=0;i<comp.length;i++){
 		$(".day").append("<option value="+comp[i]+">"+cmp[i]+"</option>");
 	}
@@ -47,20 +39,8 @@ $(document).ready(function () {
 		$(".orafine").append("<option value="+(i+1)+">"+(i+1)+":00</option>");
 	}
 	
-	
 	dataWeek();
-		
-	function dataWeek(){
-		g=$(".day").val();
-		hi=$(".orainizio").val();
-		hf=$(".orafine").val();
-		secg= week[g]*(3600*24);
-		sechi= hi*3600;
-		sechf= hf*3600;
-		begin= secg+sechi+iniz;
-		end=secg+sechf+iniz;
-	}	
-
+	
 	$(".day, .orainizio, .orafine").change(function () {
 	    dataWeek();
 		abomba();
@@ -79,6 +59,28 @@ $(document).ready(function () {
 		}
 	});
 	
+	$('.flat-menu').click(function(){
+		snapper.open('left');
+		return false;
+	});
+	
+	$('.sidebar-header').click(function(){
+		snapper.close();
+		return false;
+	});
+	
+	$('.deploy-sidebar, .page-header, .close-icon').click(function(){
+		openClose();
+		return false;
+	});
+	
+	function getMonday() {
+		d = new Date();
+		var day = d.getDay(),
+		diff = d.getDate() - day + (day == 0 ? -6:1);
+		return new Date(d.setDate(diff)).getTime()/1000;
+	}
+
 	function openClose(){
 		if( snapper.state().state=="left" ){
 			snapper.close();
@@ -86,8 +88,18 @@ $(document).ready(function () {
 			snapper.open('left');
 		}
 	}
+	
+	function dataWeek(){
+		g=$(".day").val();
+		hi=$(".orainizio").val();
+		hf=$(".orafine").val();
+		secg= week[g]*(3600*24);
+		sechi= hi*3600;
+		sechf= hf*3600;
+		begin= secg+sechi+iniz;
+		end=secg+sechf+iniz;
+	}
 });
-
 
 function abomba(){
 	xmlhttpContenuti=GetXmlHttpObject();
@@ -104,6 +116,7 @@ function abomba(){
 		xmlhttpContenuti.send(null);
 	}
 }
+
 function boomerang(){
 	if (xmlhttpContenuti.readyState==4){
 		var stringa= xmlhttpContenuti.responseText.trim();
@@ -119,6 +132,7 @@ function boomerang(){
 		}	
 	}
 }
+
 function GetXmlHttpObject(){
 	if (window.XMLHttpRequest){
 		return new XMLHttpRequest();
