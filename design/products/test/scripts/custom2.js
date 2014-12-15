@@ -54,23 +54,13 @@ $(document).ready(function () {
 		end=secg+sechf+iniz;
 	}	
 
-	$(".day").change(function () {
+	$(".day, .orainizio, .orafine").change(function () {
 	    dataWeek();
-		abomba();
-    });
-    $(".orainizio").change(function () {
-		dataWeek();
-		abomba();
-    });
-	$(".orafine").change(function () {
-		dataWeek();
 		abomba();
     });
 });
 
 var polo="";
-var orai=1417694400;
-var oraf=1417775400;
 $(document).ready(function() {
 	var snapper = new Snap({
 		element: document.getElementById('content')
