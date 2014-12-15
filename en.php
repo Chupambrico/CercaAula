@@ -9,7 +9,7 @@ $conn = new mysqli($db_host, $db_user, $db_pass,$db_name);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-/*
+
 date_default_timezone_set('Europe/Rome');
 
 $iniz=strtotime('last monday', strtotime('tomorrow'));;
@@ -26,31 +26,22 @@ $cust = array(
     "Biblioteca di Ingegneria, Mesiano" => "Mesiano",
     "Facolta di Sociologia, via Verdi 26" => "Sociologia",
 );
-*/
+
 $sql="TRUNCATE TABLE orariom";
-$conn->query($sql);
-if (mysqli_query($conn, $sql)) {
-				//echo "New record created successfully<br>";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
-			}
-$sql="INSERT INTO orariom (id, aula, polo, orainizio, orafine, data) SELECT NULL, aula, polo, orainizio, orafine, data FROM orario"; 
-$conn->query($sql);
-/*if (mysqli_query($conn, $sql)) {
-				//echo "New record created successfully<br>";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
-			}
+if (!(mysqli_query($conn, $sql))) {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+}
+$sql="INSERT INTO orariom SELECT * FROM orario"; 
+if (!(mysqli_query($conn, $sql))) {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+}
 $sql="TRUNCATE TABLE freeaula";
-$conn->query($sql);
-if (mysqli_query($conn, $sql)) {
-				//echo "New record created successfully<br>";
-			} else {
-				echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
-			}
+if (!(mysqli_query($conn, $sql))) {
+	echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
+}
 $sql = "SELECT DISTINCT aula,polo FROM orariom";
 $result = $conn->query($sql);
-*/
+
 /*if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
