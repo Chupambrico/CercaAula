@@ -17,13 +17,13 @@ if (!$conn) {
 	$orai=$_GET["orai"];
 	$oraf=$_GET["oraf"];
 	
-	$sql = "SELECT DISTINCT aula,orainizio,orafine,edificio FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf.") ORDER BY freeaula.aula";
+	$sql = "SELECT * FROM freeaula WHERE freeaula.polo='".$polo."' AND (freeaula.orainizio<=".$orai." AND freeaula.orafine>=".$oraf.") ORDER BY freeaula.aula";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
 			//echo $row["aula"]."/".date("G:i",$row["orainizio"])."/".date("G:i",$row["orafine"])."<removekebab>";
-			echo $row["aula"]."£".$row["orainizio"]."£".$row["orafine"]./*"£".$row["id"].*/"£".$row["edificio"]."<removekebab>";
+			echo $row["aula"]."£".$row["orainizio"]."£".$row["orafine"]."£".$row["id"]."£".$row["edificio"]."<removekebab>";
 			}
      
 	} else {
