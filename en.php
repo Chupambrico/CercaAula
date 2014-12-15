@@ -35,7 +35,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 		$notte = $iniz;
-		while($notte<=$fin){
+		while($notte<$fin){
 			$sql = "INSERT INTO orario (aula, polo, orainizio, orafine)
 			 VALUES ('".$row['aula']."','".$row['polo']."',".$notte.",".($notte+21600).")";
 
