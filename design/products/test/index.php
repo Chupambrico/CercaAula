@@ -34,7 +34,7 @@
 		<script src="scripts/snap.js"			 type="text/javascript"></script>
 		<script src="scripts/hammer.js"			 type="text/javascript"></script>	
 		<script src="scripts/jquery-ui-min.js"   type="text/javascript"></script>
-		<script src="scripts/custom2.js"		 type="text/javascript"></script>
+		<script src="scripts/custom.js"			 type="text/javascript"></script>
 		<script src="scripts/framework.js"		 type="text/javascript"></script>
 
 	</head>
