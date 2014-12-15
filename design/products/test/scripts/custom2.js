@@ -17,15 +17,9 @@ comp[2]="mer";
 comp[3]="gio";
 comp[4]="ven";
 
-var iniz;
-var d = new Date();
-var n = d.getTime()/1000; 
-var begin,end,g,hi,hf,secg,sechi,sechf;
-var polo="";
+var begin,end,g,hi,hf,secg,sechi,sechf,iniz,polo="";
 
 $(document).ready(function () {
-	iniz=getMonday();
-	
 	var snapper = new Snap({
 		element: document.getElementById('content')
 	});
@@ -39,6 +33,7 @@ $(document).ready(function () {
 		$(".orafine").append("<option value="+(i+1)+">"+(i+1)+":00</option>");
 	}
 	
+	iniz=getMonday();
 	dataWeek();
 	
 	$(".day, .orainizio, .orafine").change(function () {
@@ -78,7 +73,7 @@ $(document).ready(function () {
 		d = new Date();
 		var day = d.getDay(),
 		diff = d.getDate() - day + (day == 0 ? -6:1);
-		return new Date(d.setDate(diff)).getTime()/1000;
+		return new ((Date(d.setDate(diff)).getTime())/1000);
 	}
 
 	function openClose(){
