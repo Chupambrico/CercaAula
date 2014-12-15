@@ -152,7 +152,7 @@ function boomerang(){
 				//$(".result ul").append("<li><div class='hours'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"</div><div class='room'>"+temp[0]+"</div></li>");
 				//$(".result").append("<div class='small-notification yellow-notification'><p>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"|"+temp[0]+"</p></div>");
 				//$(".result").append("<div class='dropdown-item bg-light'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"|"+temp[0]+"</div>");
-				$(".result").append("<div class='container'><h4 class='heading left-text'>"+temp[0]+"</h4><p class='left-text'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"</p></div><div class='decoration'></div>");
+				$(".result").append("<div class='container'><h4 class='heading left-text'>"+temp[0]+"</h4><p class='left-text'>"+temp[4]+"</p><p class='left-text'>Libera fino alle "+finq.getHours()+":"+finq.getMinutes()+"</p></div><div class='decoration'></div>");
 				
 			}
 		    
