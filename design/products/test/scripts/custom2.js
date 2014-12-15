@@ -55,14 +55,14 @@ function dataWeek(){
 		 abomba();
 }	
 
- $(".day").click(function () {
+ $(".day option").click(function () {
 	     dataWeek()
     });
-    $(".orainizio").click(function () {
+    $(".orainizio option").click(function () {
 			dataWeek()
 		
     });
-   $(".orafine").click(function () {
+   $(".orafine option").click(function () {
 		dataWeek()
     });
 });
